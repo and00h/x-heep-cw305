@@ -1,0 +1,10 @@
+#ifndef FI_CONF_H
+#define FI_CONF_H
+#define IN_CHANNELS 1
+#define OUT_CHANNELS 16
+#define SPATIAL_SIZE_W 28
+#define SPATIAL_SIZE_H 28
+#define OUT_SPATIAL_SIZE_H 28
+#define OUT_SPATIAL_SIZE_W 28
+#define TARGET_CONV1
+#endif

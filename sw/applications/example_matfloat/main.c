@@ -11,6 +11,7 @@
 
 #define FS_INITIAL 0x01
 
+#define ENABLE_PRINTF 1
 /* By default, printfs are activated for FPGA and disabled for simulation. */
 #define PRINTF_IN_FPGA  1
 #define PRINTF_IN_SIM   0
@@ -164,7 +165,7 @@ int main()
     print_vector(vec_c,SIZE);
 #endif
 
-    return errors;
+    return 1;
 }
 
 void __attribute__ ((noinline)) vector_add(float *  A, float *  B, float *  C, int N)

@@ -1,0 +1,1 @@
+`define REG_TARGET_RESET 0

@@ -101,7 +101,7 @@ endif()
 # Set the CMAKE C flags (which should also be used by the assembler!
 # specify the C standard
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g" )
-set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=${CMAKE_SYSTEM_PROCESSOR} ${COMPILER_FLAGS}" )
+set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=${CMAKE_SYSTEM_PROCESSOR} ${COMPILER_FLAGS} -fno-strict-aliasing" )
 if ($ENV{COMPILER} MATCHES "clang")
      set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-command-line-argument --target=riscv32 --gcc-toolchain=$ENV{RISCV_XHEEP} --sysroot=$ENV{RISCV_XHEEP}/$ENV{COMPILER_PREFIX}elf" )
 endif()

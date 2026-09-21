@@ -90,6 +90,9 @@ module pad_ring (
     else:
         continue
     %>
+% if pad.name in ["spi_flash_sck", "spi_flash_sd_0", "spi_flash_sd_1", "spi_flash_sd_2", "spi_flash_sd_3"]:
+`ifndef FPGA_CW305
+% endif
     pad_cell_${pad_type} #(
         .PADATTR(${num_attribute_bits})
     ) u_pad_${pad.name} (
@@ -98,7 +101,13 @@ module pad_ring (
         .pad_out_o(${pad_out_o}),
         .pad_io(${pad_io}),
         .pad_attributes_i(${pad_attributes_i})
-    );   
+    );
+% if pad.name in ["spi_flash_sck", "spi_flash_sd_0", "spi_flash_sd_1", "spi_flash_sd_2", "spi_flash_sd_3"]:
+`else
+  assign ${pad_io} = ${pad_out_o};
+  assign ${pad_in_i}  = ${pad_out_o};
+`endif
+% endif  
 % endfor
 
 % if len(analog_signal_pads) > 0:

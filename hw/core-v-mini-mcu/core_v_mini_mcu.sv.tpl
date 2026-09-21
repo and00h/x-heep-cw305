@@ -133,7 +133,16 @@ module core_v_mini_mcu
     // External SPC interface
     input logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] ext_dma_slot_tx_i,
     input logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] ext_dma_slot_rx_i,
-    output logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] dma_done_o
+    output logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] dma_done_o,
+
+    // CW305 USB interface
+    input  logic                      usb_clk_i,
+    inout  logic [7:0]                cw_usb_data_io,
+    input  logic [20:0]               cw_usb_addr_i,
+    input  logic                      cw_usb_rd_ni,
+    input  logic                      cw_usb_we_ni,
+    input  logic                      cw_usb_cs_ni,
+    output logic                      heep_rst_no
 );
 
   import core_v_mini_mcu_pkg::*;
@@ -167,6 +176,8 @@ module core_v_mini_mcu
   obi_resp_t [${dma_obi_msb}:0]dma_write_resp;
   obi_req_t [${dma_obi_msb}:0]dma_addr_req;
   obi_resp_t [${dma_obi_msb}:0]dma_addr_resp;
+  obi_req_t cw_master_req;
+  obi_resp_t cw_master_resp;
 
   // ram signals
   obi_req_t [core_v_mini_mcu_pkg::NUM_BANKS-1:0] ram_slave_req;
@@ -374,6 +385,8 @@ module core_v_mini_mcu
       .dma_write_resp_o(dma_write_resp),
       .dma_addr_req_i(dma_addr_req),
       .dma_addr_resp_o(dma_addr_resp),
+      .cw_master_bus_req_i(cw_master_req),
+      .cw_master_bus_resp_o(cw_master_resp),
       .ext_xbar_master_req_i(ext_xbar_master_req_i),
       .ext_xbar_master_resp_o(ext_xbar_master_resp_o),
       .ram_req_o(ram_slave_req),
@@ -539,7 +552,16 @@ module core_v_mini_mcu
         .ddr_o,
       %endif
       .uart_rx_i,
-      .uart_tx_o
+      .uart_tx_o,
+      .usb_clk_i,
+      .cw_usb_data_io,
+      .cw_usb_addr_i,
+      .cw_usb_rd_ni,
+      .cw_usb_we_ni,
+      .cw_usb_cs_ni,
+      .cw_master_bus_req_o(cw_master_req),
+      .cw_master_bus_resp_i(cw_master_resp),
+      .heep_rst_no
   );
 
   // Debug_req assign

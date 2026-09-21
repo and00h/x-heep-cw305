@@ -1,0 +1,12 @@
+#ifndef FI_CONF_H
+#define FI_CONF_H
+#define N_INPUTS 4
+#define IN_CHANNELS 64
+#define OUT_CHANNELS 64
+#define SPATIAL_SIZE_W 5
+#define SPATIAL_SIZE_H 25
+#define OUT_SPATIAL_SIZE_H 25
+#define OUT_SPATIAL_SIZE_W 5
+#define TARGET_BLOCK3_POINTWISE
+#define TARGET_CONV
+#endif

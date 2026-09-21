@@ -1,0 +1,18 @@
+{ name: "cw305_usb"
+  clock_primary: "clk_i"
+  bus_interfaces: [
+    { protocol: "reg_iface", direction: "device" }
+  ]
+  regwidth: "32"
+  registers: [
+    { name:     "ECHO"
+      desc:     "Echo"
+      resval:   "0x00000000"
+      swaccess: "rw"
+      hwaccess: "hrw"
+      fields: [
+        { bits: "31:0", name: "SBSB", desc: "sbsb" }
+      ]
+    }
+   ]
+}

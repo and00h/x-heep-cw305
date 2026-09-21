@@ -1,0 +1,19 @@
+CAPI=2:
+
+name: "x-heep:ip:cw305_usb"
+description: "ChipWhisperer 305-ChipWhisperer Lite USB interface"
+
+filesets:
+  files_rtl:
+    depend:
+      - x-heep::packages
+    files:
+    - rtl/cw305_usb_reg_fe.sv
+    - rtl/cw305_xheep_bridge.sv
+    - rtl/cw305_usb.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+    - files_rtl

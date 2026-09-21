@@ -73,39 +73,39 @@ module pulp_clock_inverter (
 
 endmodule
 
-module cv32e40p_clock_gate (
-    input  logic clk_i,
-    input  logic en_i,
-    input  logic scan_cg_en_i,
-    output logic clk_o
-);
+// module cv32e40p_clock_gate (
+//     input  logic clk_i,
+//     input  logic en_i,
+//     input  logic scan_cg_en_i,
+//     output logic clk_o
+// );
 
-  xilinx_clk_gating clk_gate_i (
-      .clk_i,
-      .en_i,
-      .test_en_i(scan_cg_en_i),
-      .clk_o
-  );
+//   xilinx_clk_gating clk_gate_i (
+//       .clk_i,
+//       .en_i,
+//       .test_en_i(scan_cg_en_i),
+//       .clk_o
+//   );
 
-endmodule
+// endmodule
 
-module cv32e40x_clock_gate #(
-    parameter LIB = 0
-) (
-    input  logic clk_i,
-    input  logic en_i,
-    input  logic scan_cg_en_i,
-    output logic clk_o
-);
+// module cv32e40x_clock_gate #(
+//     parameter LIB = 0
+// ) (
+//     input  logic clk_i,
+//     input  logic en_i,
+//     input  logic scan_cg_en_i,
+//     output logic clk_o
+// );
 
-  xilinx_clk_gating clk_gate_i (
-      .clk_i,
-      .en_i,
-      .test_en_i(scan_cg_en_i),
-      .clk_o
-  );
+//   xilinx_clk_gating clk_gate_i (
+//       .clk_i,
+//       .en_i,
+//       .test_en_i(scan_cg_en_i),
+//       .clk_o
+//   );
 
-endmodule
+// endmodule
 
 module tc_clk_gating #(
     /// This paramaeter is a hint for tool/technology specific mappings of this

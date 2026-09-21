@@ -60,10 +60,31 @@ filesets:
     - scripts/genesys2/xilinx_generate_clk_wizard.tcl
     file_type: tclSource
 
+  ip-fpga-cw305:
+    files:
+    - scripts/cw305/xilinx_generate_clk_wizard.tcl
+    file_type: tclSource
+
+  rtl-fpga-cw305-usb:
+    depend:
+    - x-heep::packages
+    files:
+    - cw305/cw305_xheep_defines.sv
+    file_type: systemVerilogSource
+  
   xdc-fpga-nexys:
     files:
     - constraints/nexys/pin_assign.xdc
     - constraints/nexys/constraints.xdc
+    - constraints/common/spi_slave.xdc
+    - constraints/common/jtag.xdc
+    - constraints/common/sync.xdc
+    file_type: xdc
+
+  xdc-fpga-cw305:
+    files:
+    - constraints/cw305/constraints.xdc
+    - constraints/cw305/pin_assign.xdc
     - constraints/common/spi_slave.xdc
     - constraints/common/jtag.xdc
     - constraints/common/sync.xdc
@@ -131,3 +152,5 @@ targets:
     - target_aup-zu3 ? (ip-fpga-aup-zu3)
     - target_genesys2 ? (ip-fpga-genesys2)
     - target_genesys2 ? (xdc-fpga-genesys2)
+    - target_cw305 ? (rtl-fpga-cw305-usb)
+    - target_cw305 ? (xdc-fpga-cw305)

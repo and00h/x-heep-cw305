@@ -94,7 +94,18 @@ module peripheral_subsystem
     // PDM2PCM Interface
     output logic pdm2pcm_clk_o,
     output logic pdm2pcm_clk_en_o,
-    input  logic pdm2pcm_pdm_i
+    input  logic pdm2pcm_pdm_i,
+
+    // CW305 USB Interface 
+    input  logic                      usb_clk_i,
+    inout  logic [7:0]                cw_usb_data_io,
+    input  logic [20:0]               cw_usb_addr_i,
+    input  logic                      cw_usb_rd_ni,
+    input  logic                      cw_usb_we_ni,
+    input  logic                      cw_usb_cs_ni,
+    output obi_req_t                  cw_master_bus_req_o,
+    input  obi_resp_t                 cw_master_bus_resp_i,
+    output logic                      heep_rst_no
 );
 
   import core_v_mini_mcu_pkg::*;
@@ -656,6 +667,27 @@ module peripheral_subsystem
     .ddr_o                   
   );
 %endif
+
+% if user_peripheral_domain.contains_peripheral('cw305_usb'):
+  cw305_usb cw305_usb_u (
+      .clk_i(clk_cg),
+      .rst_ni,
+      .reg_req_i(peripheral_slv_req[core_v_mini_mcu_pkg::CW305_USB_IDX]),
+      .reg_rsp_o(peripheral_slv_rsp[core_v_mini_mcu_pkg::CW305_USB_IDX]),
+      .peripheral_master_bus_req_o(cw_master_bus_req_o),
+      .peripheral_master_bus_resp_i(cw_master_bus_resp_i),
+      .usb_clk_i(usb_clk_i),
+      .cw_usb_data_io(cw_usb_data_io),
+      .cw_usb_addr_i(cw_usb_addr_i),
+      .cw_usb_rd_ni(cw_usb_rd_ni),
+      .cw_usb_we_ni(cw_usb_we_ni),
+      .cw_usb_cs_ni(cw_usb_cs_ni),
+      .heep_rst_no
+  );
+% else:
+  assign cw_master_bus_req_o = 0;
+  assign cw_usb_data_io = 8'Z;
+% endif
 
 % if len(user_peripheral_domain.get_peripherals()) == 0:
   // If no peripherals are selected, tie off the slave response

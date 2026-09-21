@@ -206,7 +206,30 @@ int _openat(int dirfd, const char *name, int flags, int mode)
 
 __attribute__((used)) int _read(int file, void *ptr, int len)
 {
-    return 0;
+    if (file != STDOUT_FILENO) {
+        errno = ENOSYS;
+        return -1;
+    }
+
+    soc_ctrl_t soc_ctrl;
+    soc_ctrl.base_addr = mmio_region_from_addr((uintptr_t)SOC_CTRL_START_ADDRESS);
+
+    uart_t uart;
+    uart.base_addr   = mmio_region_from_addr((uintptr_t)UART_START_ADDRESS);
+    uart.baudrate    = UART_BAUDRATE;
+    uart.clk_freq_hz = soc_ctrl_get_frequency(&soc_ctrl);
+    #ifdef UART_NCO
+    uart.nco         = UART_NCO;
+    #else
+    uart.nco         = ((uint64_t)uart.baudrate << (NCO_WIDTH + 4)) / uart.clk_freq_hz;
+    #endif
+
+    if (uart_init(&uart) != kErrorOk) {
+        errno = ENOSYS;
+        return -1;
+    }
+
+    return uart_read(&uart,(uint8_t *)ptr,len);
 }
 
 int _stat(const char *file, struct stat *st)

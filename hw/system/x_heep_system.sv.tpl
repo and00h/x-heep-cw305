@@ -100,6 +100,15 @@ module x_heep_system
     // External SPC interface
     output logic [core_v_mini_mcu_pkg::DMA_CH_NUM-1:0] dma_done_o,
 
+    // CW305 USB interface
+    input  logic                      usb_clk_i,
+    inout  logic [7:0]                cw_usb_data_io,
+    input  logic [20:0]               cw_usb_addr_i,
+    input  logic                      cw_usb_rd_ni,
+    input  logic                      cw_usb_we_ni,
+    input  logic                      cw_usb_cs_ni,
+    output logic                      heep_rst_no,
+
     % for pad in xheep.get_padring().pad_list:
       <%
       has_input_pin = any(isinstance(pin, Input) for pin in pad.pins)
@@ -236,6 +245,13 @@ module x_heep_system
     .exit_value_o,
     .ext_dma_slot_tx_i,
     .ext_dma_slot_rx_i,
+    .usb_clk_i,
+    .cw_usb_data_io,
+    .cw_usb_addr_i,
+    .cw_usb_rd_ni,
+    .cw_usb_we_ni,
+    .cw_usb_cs_ni,
+    .heep_rst_no,
     .dma_done_o
   );
 

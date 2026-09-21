@@ -55,6 +55,10 @@ module system_bus
     input  obi_req_t  [EXT_XBAR_NMASTER_RND-1:0] ext_xbar_master_req_i,
     output obi_resp_t [EXT_XBAR_NMASTER_RND-1:0] ext_xbar_master_resp_o,
 
+    // CW305 USB master ports
+    input  obi_req_t  cw_master_bus_req_i,
+    output obi_resp_t cw_master_bus_resp_o,
+
     // Internal slave ports
     output obi_req_t  [NUM_BANKS-1:0] ram_req_o,
     input  obi_resp_t [NUM_BANKS-1:0] ram_resp_i,
@@ -132,6 +136,8 @@ module system_bus
   assign int_master_req[${5+i*3}]  = dma_addr_req_i[${i}];
   % endfor
 
+  assign int_master_req[6] = cw_master_bus_req_i;
+
   // Internal + external master requests
   generate
     for (genvar i = 0; i < SYSTEM_XBAR_NMASTER; i++) begin: gen_sys_master_req_map
@@ -157,6 +163,8 @@ module system_bus
   assign dma_write_resp_o[${i}] = int_master_resp[${4+i*3}];
   assign dma_addr_resp_o[${i}] = int_master_resp[${5+i*3}];
   % endfor
+  
+  assign cw_master_bus_resp_o = int_master_resp[6];
   
   // External master responses
   if (EXT_XBAR_NMASTER == 0) begin : gen_no_ext_master_resp
