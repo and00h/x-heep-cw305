@@ -1,6 +1,7 @@
 
 *.log
 build/
+build_old/
 *.so
 *.hex
 *.elf
@@ -9,6 +10,7 @@ build/
 *.do
 *.jou
 *.str
+*.bit
 .Xil/
 .venv/
 __pycache__/
@@ -101,3 +103,4 @@ flow/OpenROAD-flow-scripts
 private/
 
 
+!cw305_xheep_pd.bit
