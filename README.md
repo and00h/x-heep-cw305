@@ -1,6 +1,9 @@
 # Requirements for CW305 build
-- [uv](https://docs.astral.sh/uv/)
-
+- Install [uv](https://docs.astral.sh/uv/)
+- Follow [X-HEEP's Getting Started guide](https://x-heep.readthedocs.io/en/latest/GettingStarted/Setup.html) to setup the environment, but __use a virtual environment, _not miniconda___.
+- Use the [CORE-V toolchain](https://embecosm.com/downloads/tool-chain-downloads/#core-v-top-of-tree-compilers), __do not compile the toolchain from source as reported in X-HEEP's Getting Started__.
+- When the environment is installed, generate the MCU by running `make mcu-gen X_HEEP_CFG=configs/cw305.hjson`
+- Compile apps by running `make app PROJECT=<app_name> ARCH=rv32imfc_zicsr TARGET=cw305`
 <br />
 <p align="center"><img src="docs/source/images/x-heep-outline.png" width="500"></p>
 
