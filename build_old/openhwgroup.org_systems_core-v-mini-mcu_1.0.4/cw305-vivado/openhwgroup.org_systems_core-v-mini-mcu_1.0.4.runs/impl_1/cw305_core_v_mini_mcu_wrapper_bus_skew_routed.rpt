@@ -1,0 +1,895 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Thu Apr  9 15:20:50 2026
+| Host         : legolas running 64-bit CachyOS
+| Command      : report_bus_skew -warn_on_violation -file cw305_core_v_mini_mcu_wrapper_bus_skew_routed.rpt -pb cw305_core_v_mini_mcu_wrapper_bus_skew_routed.pb -rpx cw305_core_v_mini_mcu_wrapper_bus_skew_routed.rpx
+| Design       : cw305_core_v_mini_mcu_wrapper
+| Device       : 7a100t-ftg256
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   16        [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]}]]
+                                              [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]]
+                                                                              Slow             10.000       0.917      9.083
+2   18        [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]}]]
+                                              [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]]
+                                                                              Slow             10.000       0.814      9.186
+3   20        [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]}]]
+                                              [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]}]]
+                                                                              Slow             10.000       0.580      9.420
+4   22        [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[5]}]]
+                                              [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]}]]
+                                                                              Slow             10.000       0.577      9.423
+5   24        [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[9]}]]
+                                              [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[9]}]]
+                                                                              Slow             40.000       1.091     38.909
+6   26        [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[9]}]]
+                                              [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[9]}]]
+                                                                              Slow             40.000       0.759     39.241
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]}]] -to [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 5
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+sys_clk_pin           usb_clk_pin           x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.917      9.083
+
+
+Slack (MET) :             9.083ns  (requirement - actual skew)
+  Endpoint Source:        x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Endpoint Destination:   x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Reference Source:       x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Reference Destination:  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    1.826ns
+  Reference Relative Delay:   0.395ns
+  Relative CRPR:              0.514ns
+  Actual Bus Skew:            0.917ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.446     1.446 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.709     3.155    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.081     3.236 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.361     4.597    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X66Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y108        FDRE (Prop_fdre_C_Q)         0.398     4.995 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.907     5.902    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X65Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.326     1.326 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.628     2.954    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     3.031 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.247     4.279    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X65Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     4.279    
+    SLICE_X65Y108        FDRE (Setup_fdre_C_D)       -0.202     4.077    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           5.902    
+                         clock arrival                          4.077    
+  -------------------------------------------------------------------
+                         relative delay                         1.826    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.620     3.000    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     3.077 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.249     4.326    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X66Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y108        FDRE (Prop_fdre_C_Q)         0.347     4.673 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.406     5.079    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
+    SLICE_X67Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.392     1.392 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.717     3.109    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081     3.190 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.358     4.548    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X67Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     4.548    
+    SLICE_X67Y108        FDRE (Hold_fdre_C_D)         0.136     4.684    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+  -------------------------------------------------------------------
+                         data arrival                           5.079    
+                         clock arrival                          4.684    
+  -------------------------------------------------------------------
+                         relative delay                         0.395    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]}]] -to [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 5
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+usb_clk_pin           sys_clk_pin           x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                            x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.814      9.186
+
+
+Slack (MET) :             9.186ns  (requirement - actual skew)
+  Endpoint Source:        x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Endpoint Destination:   x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Reference Source:       x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Reference Destination:  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    1.441ns
+  Reference Relative Delay:   0.140ns
+  Relative CRPR:              0.487ns
+  Actual Bus Skew:            0.814ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.392     1.392 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.717     3.109    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081     3.190 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.358     4.548    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X66Y109        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y109        FDRE (Prop_fdre_C_Q)         0.433     4.981 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.711     5.692    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
+    SLICE_X64Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.620     3.000    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     3.077 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.249     4.326    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X64Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     4.326    
+    SLICE_X64Y108        FDRE (Setup_fdre_C_D)       -0.075     4.251    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+  -------------------------------------------------------------------
+                         data arrival                           5.692    
+                         clock arrival                          4.251    
+  -------------------------------------------------------------------
+                         relative delay                         1.441    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.326     1.326 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.628     2.954    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     3.031 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.248     4.280    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X65Y107        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y107        FDRE (Prop_fdre_C_Q)         0.304     4.584 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.291     4.874    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
+    SLICE_X65Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.446     1.446 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.709     3.155    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.081     3.236 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.362     4.598    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X65Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     4.598    
+    SLICE_X65Y106        FDRE (Hold_fdre_C_D)         0.136     4.734    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  -------------------------------------------------------------------
+                         data arrival                           4.874    
+                         clock arrival                          4.734    
+  -------------------------------------------------------------------
+                         relative delay                         0.140    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]}]] -to [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+usb_clk_pin           sys_clk_pin           x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                                                            Slow         0.580      9.420
+
+
+Slack (MET) :             9.420ns  (requirement - actual skew)
+  Endpoint Source:        x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Endpoint Destination:   x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Reference Source:       x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Reference Destination:  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    1.232ns
+  Reference Relative Delay:   0.184ns
+  Relative CRPR:              0.468ns
+  Actual Bus Skew:            0.580ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.392     1.392 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.717     3.109    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081     3.190 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.359     4.549    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_clk
+    SLICE_X65Y107        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y107        FDRE (Prop_fdre_C_Q)         0.348     4.897 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.447     5.344    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/async_path[3]
+    SLICE_X61Y107        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.620     3.000    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     3.077 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.247     4.324    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_clk
+    SLICE_X61Y107        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     4.324    
+    SLICE_X61Y107        FDRE (Setup_fdre_C_D)       -0.212     4.112    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           5.344    
+                         clock arrival                          4.112    
+  -------------------------------------------------------------------
+                         relative delay                         1.232    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.326     1.326 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.628     2.954    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     3.031 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.247     4.279    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_clk
+    SLICE_X65Y108        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y108        FDRE (Prop_fdre_C_Q)         0.304     4.583 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.335     4.918    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/async_path[5]
+    SLICE_X64Y109        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.446     1.446 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.709     3.155    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.081     3.236 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.361     4.597    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_clk
+    SLICE_X64Y109        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism              0.000     4.597    
+    SLICE_X64Y109        FDRE (Hold_fdre_C_D)         0.136     4.733    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]
+  -------------------------------------------------------------------
+                         data arrival                           4.918    
+                         clock arrival                          4.733    
+  -------------------------------------------------------------------
+                         relative delay                         0.184    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[5]}]] -to [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]} {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 6
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+sys_clk_pin           usb_clk_pin           x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                            x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.577      9.423
+
+
+Slack (MET) :             9.423ns  (requirement - actual skew)
+  Endpoint Source:        x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Endpoint Destination:   x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/D
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Reference Source:       x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Reference Destination:  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    1.336ns
+  Reference Relative Delay:   0.264ns
+  Relative CRPR:              0.495ns
+  Actual Bus Skew:            0.577ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.446     1.446 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.709     3.155    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.081     3.236 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.362     4.598    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_clk
+    SLICE_X67Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y106        FDRE (Prop_fdre_C_Q)         0.348     4.946 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.463     5.409    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/async_path[4]
+    SLICE_X69Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.326     1.326 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.628     2.954    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     3.031 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.251     4.283    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_clk
+    SLICE_X69Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism              0.000     4.283    
+    SLICE_X69Y106        FDRE (Setup_fdre_C_D)       -0.209     4.074    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]
+  -------------------------------------------------------------------
+                         data arrival                           5.409    
+                         clock arrival                          4.074    
+  -------------------------------------------------------------------
+                         relative delay                         1.336    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.620     3.000    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     3.077 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.250     4.327    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_clk
+    SLICE_X67Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y106        FDRE (Prop_fdre_C_Q)         0.304     4.631 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.321     4.952    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/async_path[2]
+    SLICE_X67Y105        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.392     1.392 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.717     3.109    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081     3.190 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.360     4.550    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_clk
+    SLICE_X67Y105        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     4.550    
+    SLICE_X67Y105        FDRE (Hold_fdre_C_D)         0.138     4.688    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]
+  -------------------------------------------------------------------
+                         data arrival                           4.952    
+                         clock arrival                          4.688    
+  -------------------------------------------------------------------
+                         relative delay                         0.264    
+
+
+
+Id: 5
+set_bus_skew -from [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[9]}]] -to [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[9]}]] 40.000
+Requirement: 40.000ns
+Endpoints: 32
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+usb_clk_pin           sys_clk_pin           x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]/D
+                                                                            x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]/D
+                                                                                                            Slow         1.091     38.909
+
+
+Slack (MET) :             38.909ns  (requirement - actual skew)
+  Endpoint Source:        x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Endpoint Destination:   x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Reference Source:       x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Reference Destination:  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            40.000ns
+  Endpoint Relative Delay:    1.677ns
+  Reference Relative Delay:   0.099ns
+  Relative CRPR:              0.487ns
+  Actual Bus Skew:            1.091ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.392     1.392 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.717     3.109    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081     3.190 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.355     4.545    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_clk
+    SLICE_X65Y113        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y113        FDRE (Prop_fdre_C_Q)         0.379     4.924 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[19]/Q
+                         net (fo=1, routed)           1.048     5.972    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff[19]
+    SLICE_X62Y114        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.620     3.000    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     3.077 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.245     4.322    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_clk
+    SLICE_X62Y114        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]/C
+                         clock pessimism              0.000     4.322    
+    SLICE_X62Y114        FDRE (Setup_fdre_C_D)       -0.027     4.295    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[19]
+  -------------------------------------------------------------------
+                         data arrival                           5.972    
+                         clock arrival                          4.295    
+  -------------------------------------------------------------------
+                         relative delay                         1.677    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.326     1.326 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.628     2.954    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     3.031 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.245     4.277    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_clk
+    SLICE_X64Y112        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y112        FDRE (Prop_fdre_C_Q)         0.304     4.581 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff_reg[17]/Q
+                         net (fo=1, routed)           0.305     4.886    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/src_hsdata_ff[17]
+    SLICE_X62Y112        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.446     1.446 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.709     3.155    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.081     3.236 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.359     4.595    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_clk
+    SLICE_X62Y112        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]/C
+                         clock pessimism              0.000     4.595    
+    SLICE_X62Y112        FDRE (Hold_fdre_C_D)         0.191     4.786    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_req/dest_hsdata_ff_reg[17]
+  -------------------------------------------------------------------
+                         data arrival                           4.886    
+                         clock arrival                          4.786    
+  -------------------------------------------------------------------
+                         relative delay                         0.099    
+
+
+
+Id: 6
+set_bus_skew -from [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[9]}]] -to [get_cells [list {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[0]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[10]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[11]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[12]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[13]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[14]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[15]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[16]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[17]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[18]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[19]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[1]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[20]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[21]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[22]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[24]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[25]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[26]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[27]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[28]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[29]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[2]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[30]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[31]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[3]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[4]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[6]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[7]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[8]} \
+          {x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[9]}]] 40.000
+Requirement: 40.000ns
+Endpoints: 32
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+sys_clk_pin           usb_clk_pin           x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]/D
+                                                                            x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]/D
+                                                                                                            Slow         0.759     39.241
+
+
+Slack (MET) :             39.241ns  (requirement - actual skew)
+  Endpoint Source:        x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Endpoint Destination:   x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Reference Source:       x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[23]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin)
+  Reference Destination:  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]/D
+                            (rising edge-triggered cell FDRE clocked by usb_clk_pin)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            40.000ns
+  Endpoint Relative Delay:    1.405ns
+  Reference Relative Delay:   0.198ns
+  Relative CRPR:              0.449ns
+  Actual Bus Skew:            0.759ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.446     1.446 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.709     3.155    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.081     3.236 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.356     4.592    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_clk
+    SLICE_X56Y105        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y105        FDRE (Prop_fdre_C_Q)         0.398     4.990 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[5]/Q
+                         net (fo=1, routed)           0.552     5.542    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff[5]
+    SLICE_X56Y107        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.326     1.326 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.628     2.954    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     3.031 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.244     4.276    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_clk
+    SLICE_X56Y107        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]/C
+                         clock pessimism              0.000     4.276    
+    SLICE_X56Y107        FDRE (Setup_fdre_C_D)       -0.139     4.137    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[5]
+  -------------------------------------------------------------------
+                         data arrival                           5.542    
+                         clock arrival                          4.137    
+  -------------------------------------------------------------------
+                         relative delay                         1.405    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    clk_i
+    N14                  IBUF (Prop_ibuf_I_O)         1.380     1.380 r  clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.620     3.000    clk_i_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     3.077 r  clk_gen_buf/O
+                         net (fo=14490, routed)       1.247     4.324    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_clk
+    SLICE_X59Y105        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y105        FDRE (Prop_fdre_C_Q)         0.304     4.628 r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff_reg[23]/Q
+                         net (fo=1, routed)           0.319     4.947    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/src_hsdata_ff[23]
+    SLICE_X58Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock usb_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    F5                                                0.000     0.000 r  usb_clk_i (INOUT)
+                         net (fo=0)                   0.000     0.000    usb_clk_i
+    F5                   IBUF (Prop_ibuf_I_O)         1.392     1.392 r  usb_clk_i_IBUF_inst/O
+                         net (fo=1, routed)           1.717     3.109    usb_clk_i_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.081     3.190 r  usb_clk_i_IBUF_BUFG_inst/O
+                         net (fo=1337, routed)        1.355     4.545    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_clk
+    SLICE_X58Y106        FDRE                                         r  x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]/C
+                         clock pessimism              0.000     4.545    
+    SLICE_X58Y106        FDRE (Hold_fdre_C_D)         0.204     4.749    x_heep_system_i/core_v_mini_mcu_i/peripheral_subsystem_i/cw305_usb_u/u_bridge/u_cdc_read_resp/dest_hsdata_ff_reg[23]
+  -------------------------------------------------------------------
+                         data arrival                           4.947    
+                         clock arrival                          4.749    
+  -------------------------------------------------------------------
+                         relative delay                         0.198    
+
+
+
